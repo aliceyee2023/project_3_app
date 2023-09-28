@@ -1,5 +1,4 @@
 streamlit
-pip
 pandas
 numpy
 nltk
@@ -8,6 +7,5 @@ scikit-learn
 imblearn
 xgboost
 gensim
-pickle
 praw
 streamlit-player
