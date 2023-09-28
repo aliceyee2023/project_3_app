@@ -1,0 +1,12 @@
+streamlit
+pandas
+numpy
+nltk
+sklearn
+scikit-learn
+imblearn
+xgboost
+gensim
+pickle
+praw
+streamlit-player
