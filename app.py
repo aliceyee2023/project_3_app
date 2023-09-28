@@ -257,13 +257,12 @@ if selected == 'Analyse Text':
 
                 # Get probability estimates for the predictions
                 confidence_scores = loaded_model.predict_proba(X_new)
-                if confidence_scores < 0.5:
-                    subreddit = 'Inconclusive'
-
                 if predictions == 1:
                     subreddit = 'r/intermittentfasting'
-                else:
+                if predictions == 0:
                     subreddit = 'r/AnorexiaNervosa'
+                if confidence_scores < 0.5:
+                    subreddit = 'Inconclusive'
 
                 # Display the prediction
                 st.write(f'Predicted subreddit: <p class="big-font">{subreddit}</p>', unsafe_allow_html=True)
