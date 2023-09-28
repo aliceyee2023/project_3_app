@@ -20,7 +20,7 @@ from praw.models import MoreComments
 
 # Set webpage name and icon
 st.set_page_config(
-    page_title='r/intermittentfasting & r/AnorexiaNervosa',
+    page_title='BiteBalance',
     page_icon='🥗',
     layout='wide',
     initial_sidebar_state='expanded'
@@ -122,7 +122,8 @@ def suggestion(subreddit_cat):
         st.write('Please enter another user or write a longer post.')
         
 ### --- TOP NAVIGATION BAR --- ###
-st.title('Intermittent Fasting vs Anorexia Nervosa')
+st.title('BiteBalance')
+st.write('By 39 SIR')
 selected = option_menu(
     menu_title = None,
     options = ['Insights', 'Analyse User','Analyse Text'],
