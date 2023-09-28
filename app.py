@@ -123,7 +123,8 @@ def suggestion(subreddit_cat):
         
 ### --- TOP NAVIGATION BAR --- ###
 selected = option_menu(
-    menu_title = "Intermittent Fasting vs Anorexia Nervosa",
+    st.title('Intermittent Fasting vs Anorexia Nervosa')
+    menu_title = None,
     options = ['Insights', 'Analyse User','Analyse Text'],
     icons = ['clipboard-data','reddit','body-text'],
     default_index = 0, # which tab it should open when page is first loaded
@@ -136,7 +137,8 @@ selected = option_menu(
 ### --- 1st SECTION --- ###
 if selected == 'Insights':
     # Section title
-    st.title('r/intermittentfasting & r/AnorexiaNervosa: An Analysis')
+    st.header('r/intermittentfasting & r/AnorexiaNervosa: An Analysis')
+    st.text("You can use the Tableau dashboard to explore the subreddits data: r/intermittentfasting and r/AnorexiaNervosa.")
     style = "<div style='background-color:#ff0e16; padding:2px'></div>"
     st.markdown(style, unsafe_allow_html = True)
 
@@ -150,7 +152,7 @@ if selected == 'Insights':
 
 ### --- 2nd SECTION --- ###
 if selected == 'Analyse User':
-    st.title("Reddit User Classifier")
+    st.header("Reddit User Classifier")
     st.text("You can use this app to classify a Reddit user into one of two subreddits: r/intermittentfasting or r/AnorexiaNervosa.")
     style = "<div style='background-color:#ff0e16; padding:2px'></div>"
     st.markdown(style, unsafe_allow_html = True)
@@ -217,7 +219,7 @@ if selected == 'Analyse User':
 
 ### --- 3rd SECTION --- ###
 if selected == 'Analyse Text':
-    st.title("Reddit Post Classifier")
+    st.header("Reddit Post Classifier")
     st.text("You can use this app to classify a Reddit post into one of two subreddits: r/intermittentfasting or r/AnorexiaNervosa.")
     style = "<div style='background-color:#ff0e16; padding:2px'></div>"
     st.markdown(style, unsafe_allow_html = True)
