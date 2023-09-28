@@ -147,7 +147,7 @@ if selected == 'Insights':
     qlik_url = "https://mfarhanrais.ap.qlikcloud.com/single/?appid=596c770c-e239-4972-b034-28b50646a14f&obj=ZjxRJgv&theme=horizon&opt=ctxmenu,currsel"
 
     # Use an iframe to embed the Qlik visualization
-    st.components.v1.iframe(qlik_url, width=800, height=600)
+    st.components.v1.iframe(qlik_url)
 
 ### --- 2nd SECTION --- ###
 if selected == 'Analyse User':
