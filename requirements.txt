@@ -1,11 +1,10 @@
 streamlit
+streamlit_option_menu
 pandas
 numpy
 nltk
-sklearn
 scikit-learn
 imblearn
-xgboost
 gensim
 praw
 streamlit-player
