@@ -143,11 +143,24 @@ if selected == 'Insights':
     st.markdown(style, unsafe_allow_html = True)
 
     # Embed dashboard
-    # Replace 'YOUR_QLIK_URL' with the URL of your Qlik Cloud visualization
-    qlik_url = "https://mfarhanrais.ap.qlikcloud.com/single/?appid=596c770c-e239-4972-b034-28b50646a14f&obj=ZjxRJgv&theme=horizon&opt=ctxmenu,currsel"
+    # Define the URL of your Tableau Public dashboard
+    tableau_url = "https://public.tableau.com/views/IntermittentFastingandObesity_16956259155130/ConsiderationofIntermittentFasting?:language=en-US&:display_count=n&:origin=viz_share_link"
 
-    # Use an iframe to embed the Qlik visualization
-    st.components.v1.iframe(qlik_url)
+    # Define the HTML and CSS code to embed the dashboard and fit the window
+    embedded_code = f"""
+    <style>
+        /* Set the iframe to occupy 100% of the window height and width */
+        iframe {{
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }}
+    </style>
+    <iframe src="{tableau_url}"></iframe>
+    """
+
+    # Use st.components.v1.html to render the HTML content in Streamlit
+    st.components.v1.html(embedded_code)
 
 ### --- 2nd SECTION --- ###
 if selected == 'Analyse User':
