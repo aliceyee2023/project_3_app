@@ -94,10 +94,10 @@ def clean_data(text_df):
     return text_df
 
 # Load the trained model and vectorizer from pickle files
-#model_filepath = '../data/bernoulli_model.pkl'
-model_filepath = '/Users/m.farhanrais/Documents/GitHub/DSI-SG-39/My Projects/Project 3/data/bernoulli_model.pkl'
-#vectorizer_filepath = '../data/tfidf_vectorizer.pkl'
-vectorizer_filepath = '/Users/m.farhanrais/Documents/GitHub/DSI-SG-39/My Projects/Project 3/data/tfidf_vectorizer.pkl'
+model_filepath = '../data/bernoulli_model.pkl'
+#model_filepath = '/Users/m.farhanrais/Documents/GitHub/DSI-SG-39/My Projects/Project 3/data/bernoulli_model.pkl'
+vectorizer_filepath = '../data/tfidf_vectorizer.pkl'
+#vectorizer_filepath = '/Users/m.farhanrais/Documents/GitHub/DSI-SG-39/My Projects/Project 3/data/tfidf_vectorizer.pkl'
 
 with open(model_filepath, 'rb') as model_file:
     loaded_model = pickle.load(model_file)
