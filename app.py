@@ -257,8 +257,8 @@ if selected == 'Analyse Text':
 
                 # Get probability estimates for the predictions
                 confidence_scores = loaded_model.predict_proba(X_new)
-                if confidence_scores < 0.5:
-                    subreddit = 'Inconclusive'
+                #if confidence_scores < 0.5:
+                #    subreddit = 'Inconclusive'
 
                 if predictions == 1:
                     subreddit = 'r/intermittentfasting'
