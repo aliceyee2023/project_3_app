@@ -9,10 +9,9 @@ import sklearn
 
 import nltk
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
+nltk.download('stopwords')
 
 import gensim.utils
-from gensim.models import Word2Vec
 
 import pickle
 
