@@ -122,8 +122,8 @@ def suggestion(subreddit_cat):
         st.write('Please enter another user or write a longer post.')
         
 ### --- TOP NAVIGATION BAR --- ###
+st.title('Intermittent Fasting vs Anorexia Nervosa')
 selected = option_menu(
-    st.title('Intermittent Fasting vs Anorexia Nervosa')
     menu_title = None,
     options = ['Insights', 'Analyse User','Analyse Text'],
     icons = ['clipboard-data','reddit','body-text'],
