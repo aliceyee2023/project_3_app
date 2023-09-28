@@ -207,8 +207,8 @@ if selected == 'Analyse User':
                     "label": consolidated_prediction_label,
                     "confidence_scores": weighted_confidence_scores.tolist()
                 }
-                #if weighted_confidence_scores.tolist()[0] < 0.5:
-                #    consolidated_prediction_label = 'Inconclusive'
+                if weighted_confidence_scores.tolist()[0] < 0.5:
+                    consolidated_prediction_label = 'Inconclusive'
 
                 # Display the prediction
                 st.write(f'Predicted subreddit: <p class="big-font">{consolidated_prediction_label}</p>', unsafe_allow_html=True)
