@@ -3,6 +3,8 @@ streamlit_option_menu
 pandas
 numpy
 nltk
+nltk.corpus
+nltk.tokenize
 scikit-learn
 imblearn
 gensim
