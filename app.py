@@ -108,18 +108,19 @@ def suggestion(subreddit_cat):
         #test
         st.write('Suggested content:')
         st.write('1. Subreddit: [r/intermittentfasting](https://www.reddit.com/r/intermittentfasting/)')
-        st.write('2. IF subreddit wiki: [r/intermittentfasting wiki](https://www.reddit.com/r/intermittentfasting/wiki/index/)')
-        st.write('3. Get started: [ActiveSG Circle](https://www.activesgcircle.gov.sg/activehealth/read/nutrition/what-is-intermittent-fasting)')
+        st.write('2. Gym equipment: [Colony.co](https://gymsportz.sg)')
+        st.write('3. Protein supplements: [Protein la Muffins](https://www.myprotein.com.sg/nutrition/protein.list)')
+        st.write('4. Grooming classes: [79 @ Anson](https://imageworks.sg/professional-image-workshop/)')
         st_player("https://youtu.be/A6Dkt7zyImk?si=Xtipaa6y0bGoeqTP")
     if subreddit_cat == 'r/AnorexiaNervosa':
         st.write('Suggested content:')
         st.write('1. Subreddit: [r/AnorexiaNervosa](https://www.reddit.com/r/AnorexiaNervosa/)')
-        st.write('2. AN wiki: [AN wiki](https://en.wikipedia.org/wiki/Anorexia_nervosa)')
+        st.write('2. Stress Management: [40 SIB Wellness](https://www.healthhub.sg/live-healthy/be-a-master-of-stress)')
         st.write('3. Need help? [Singapore Counselling Centre](https://scc.sg/e/anorexia-nervosa/)')
         st_player("https://youtu.be/tOouAmEEnlc?si=_Zp6s89eNIVIHFa6")
     if subreddit_cat == 'Inconclusive':
         st.write('The confidence score is too low to make a conclusive prediction.')
-        st.write('Please enter another user or write a longer post.')
+        st.write('Please enter another user.')
         
 ### --- TOP NAVIGATION BAR --- ###
 st.title('BiteBalance')
