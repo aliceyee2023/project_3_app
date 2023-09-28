@@ -117,6 +117,9 @@ def suggestion(subreddit_cat):
         st.write('2. AN wiki: [AN wiki](https://en.wikipedia.org/wiki/Anorexia_nervosa)')
         st.write('3. Need help? [Singapore Counselling Centre](https://scc.sg/e/anorexia-nervosa/)')
         st_player("https://youtu.be/tOouAmEEnlc?si=_Zp6s89eNIVIHFa6")
+    if subreddit_cat == 'Inconclusive':
+        st.write('The confidence score is too low to make a conclusive prediction.')
+        st.write('Please enter another user or write a longer post.')
         
 ### --- TOP NAVIGATION BAR --- ###
 selected = option_menu(
@@ -202,6 +205,8 @@ if selected == 'Analyse User':
                     "label": consolidated_prediction_label,
                     "confidence_scores": weighted_confidence_scores.tolist()
                 }
+                if weighted_confidence_scores.tolist()[0] < 0.5:
+                    consolidated_prediction_label = 'Inconclusive'
 
                 # Display the prediction
                 st.write(f'Predicted subreddit: <p class="big-font">{consolidated_prediction_label}</p>', unsafe_allow_html=True)
@@ -250,6 +255,8 @@ if selected == 'Analyse Text':
 
                 # Get probability estimates for the predictions
                 confidence_scores = loaded_model.predict_proba(X_new)
+                if confidence_scores < 0.5:
+                    subreddit = 'Inconclusive'
 
                 if predictions == 1:
                     subreddit = 'r/intermittentfasting'
