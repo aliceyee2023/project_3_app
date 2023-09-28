@@ -137,18 +137,17 @@ selected = option_menu(
 ### --- 1st SECTION --- ###
 if selected == 'Insights':
     # Section title
-    st.header('r/intermittentfasting & r/AnorexiaNervosa: An Analysis')
-    st.text("You can use the Tableau dashboard to explore the subreddits data: r/intermittentfasting and r/AnorexiaNervosa.")
+    st.header('Insights Dashboard')
+    st.text("You can use the dashboard to explore the subreddits data: r/intermittentfasting and r/AnorexiaNervosa.")
     style = "<div style='background-color:#ff0e16; padding:2px'></div>"
     st.markdown(style, unsafe_allow_html = True)
 
-    # Embed Tableau dashboard
-    # Define HTML content as a string
-    custom_html = """
-    <div class='tableauPlaceholder' id='viz1695713100053' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;IntermittentFastingandObesity_16956259155130&#47;ConsiderationofIntermittentFasting&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='IntermittentFastingandObesity_16956259155130&#47;ConsiderationofIntermittentFasting' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;IntermittentFastingandObesity_16956259155130&#47;ConsiderationofIntermittentFasting&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1695713100053');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    """
-    # Embed HTML content
-    st.components.v1.html(custom_html, width=800, height=600)
+    # Embed dashboard
+    # Replace 'YOUR_QLIK_URL' with the URL of your Qlik Cloud visualization
+    qlik_url = "https://mfarhanrais.ap.qlikcloud.com/single/?appid=596c770c-e239-4972-b034-28b50646a14f&obj=ZjxRJgv&theme=horizon&opt=ctxmenu,currsel"
+
+    # Use an iframe to embed the Qlik visualization
+    st.components.v1.iframe(qlik_url, width=800, height=600)
 
 ### --- 2nd SECTION --- ###
 if selected == 'Analyse User':
